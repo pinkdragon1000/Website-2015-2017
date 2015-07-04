@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE-edge">
+<meta name "viewport" content="width=device-width, initial-scale=1">
+<title>Picture Portfolio</title>
+<link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+<div clas="container">
+<div class="row">
+<div class="col-md-6">
+<img src="images/animals.png" alt="animals">
+</div>
+<div class="col-md-6 text-right text-uppercase">
+<h1>Sita Robinson</h1>
+<h4>Photography Lover</h4>
+
+</div>
+</div>
+</div>
+</body>
+</html>
