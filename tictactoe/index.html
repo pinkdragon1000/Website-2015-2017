@@ -110,7 +110,7 @@ $(document).ready(
 		$("#reset").click(function(){reset();});
 		console.log("document ready");
 		
-		$(".place").click(
+		$(".place").on("click touch",
 		function(){
 			console.log("Clicked");
 			var what = $(this).html();
@@ -188,7 +188,10 @@ font-weight: bold;
 border-radius:5px;
 cursor:pointer;
 }
-
+.place:hover
+{
+background-color:pink;
+}
 </style>
 
 
