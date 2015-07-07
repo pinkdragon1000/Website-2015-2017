@@ -1,0 +1,236 @@
+<html>
+
+<head>
+	
+<title> Tic Tac Toe </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+var count=0;
+
+function reset() 
+{
+
+	$(".place").html("+")
+	count=0;
+ $("#prompt").html("X goes first")
+
+}
+var win = new Audio("win.mp3");
+win.load();
+function playwin()
+{
+win.play();
+
+}
+
+function check()
+{
+  if($("#p11").html().startsWith("X")&& $("#p12").html().startsWith("X")&& $("#p13").html().startsWith("X"))
+  {
+    return "X";
+  }
+  else if($("#p21").html().startsWith("X")&& $("#p22").html().startsWith("X") && $("#p23").html().startsWith("X"))
+  {
+    return "X";
+  }
+  else if($("#p31").html().startsWith("X")&& $("#p32").html().startsWith("X") && $("#p33").html().startsWith("X"))
+{
+  return "X";
+}
+else if($("#p31").html().startsWith("X")&& $("#p22").html().startsWith("X")&& $("#p13").html().startsWith("X"))
+{
+return "X";
+}
+else if ($("#p11").html().startsWith("X")&& $("#p21").html().startsWith("X")&& $("#p31").html().startsWith("X"))
+{
+return "X";
+}
+else if($("#p12").html().startsWith("X")&& $("#p22").html().startsWith("X")&& $("#p32").html().startsWith("X"))
+{
+return "X";
+}
+else if($("#p13").html().startsWith("X")&& $("#p23").html().startsWith("X")&& $("#p33").html().startsWith("X"))
+{
+return "X";
+}
+else if ($("#p11").html().startsWith("X")&& $("#p22").html().startsWith("X")&& $("#p33").html().startsWith("X"))
+{
+return "X";
+}
+
+else if($("#p11").html().startsWith("O")&& $("#p12").html().startsWith("O")&& $("#p13").html().startsWith("O"))
+{
+return "O";
+}
+else if($("#p21").html().startsWith("O")&& $("#p22").html().startsWith("O") && $("#p23").html().startsWith("O"))
+{
+return "O";
+}
+else if($("#p31").html().startsWith("O")&& $("#p32").html().startsWith("O") && $("#p33").html().startsWith("O"))
+{
+return "O";
+}
+else if($("#p31").html().startsWith("O")&& $("#p22").html().startsWith("O")&& $("#p13").html().startsWith("O"))
+{
+return "O";
+}
+else if ($("#p11").html().startsWith("O")&& $("#p21").html().startsWith("O")&& $("#p31").html().startsWith("O"))
+{
+  return "O";
+}
+else if($("#p12").html().startsWith("O")&& $("#p22").html().startsWith("O")&& $("#p32").html().startsWith("O"))
+{
+  return "O";
+}
+else if($("#p13").html().startsWith("O")&& $("#p23").html().startsWith("O")&& $("#p33").html().startsWith("O"))
+{
+  return "O";
+}
+else if ($("#p11").html().startsWith("O")&& $("#p22").html().startsWith("O")&& $("#p33").html().startsWith("O"))
+{
+return "O";
+}
+else if(!$("#p11").html().startsWith("+")&& !$("#p12").html().startsWith("+")&& !$("#p13").html().startsWith("+") && !$("#p21").html().startsWith("+") && !$("#p22").html().startsWith("+")&& !$("#p23").html().startsWith("+")&& !$("#p31").html().startsWith("+") && !$("#p32").html().startsWith("+") && !$("#p33").html().startsWith("+"))
+{
+  return "C";
+}
+else
+{
+  return "";
+}
+}
+
+
+
+console.log("Play Tic Tac Toe!!");
+$(document).ready(
+
+	function() {
+		$("#reset").click(function(){reset();});
+		console.log("document ready");
+		
+		$(".place").click(
+		function(){
+			console.log("Clicked");
+			var what = $(this).html();
+			if ($(this).html().startsWith("+"))
+			{
+
+			if(count%2==0)
+			{
+				$(this).html("X");
+			}
+			else
+			{
+				$(this).html("O");	
+			}
+			count++;
+		}
+    if(check()=="X")
+    {
+      $("#prompt").html("X Wins!!!")
+      playwin();
+    }
+    else if(check()=="O")
+    {
+      $("#prompt").html("O Wins!!!")
+      playwin();
+    }
+    else if (check()=="C")
+      $("#prompt").html("Cats Game-No Winner")
+
+		});
+
+	});
+
+
+</script>
+<style>
+.btn {
+	display: inline-block;
+  background: #fc62dd;
+  background-image: -webkit-linear-gradient(top, #fc62dd, #ebc86f);
+  background-image: -moz-linear-gradient(top, #fc62dd, #ebc86f);
+  background-image: -ms-linear-gradient(top, #fc62dd, #ebc86f);
+  background-image: -o-linear-gradient(top, #fc62dd, #ebc86f);
+  background-image: linear-gradient(to bottom, #fc62dd, #ebc86f);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.btn:hover {
+  background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.place {
+border: 1px solid black;
+width: 64px;
+height: 64px;
+text-align:center;
+font-size: 56px;
+display: inline-block;
+margin:5px;
+font-family: Courier;
+font-weight: bold;
+border-radius:5px;
+cursor:pointer;
+}
+.place:hover
+{
+background-color:pink;
+}
+</style>
+
+
+
+</head>
+<body>
+<h1>Tic Tac Toe</h1>
+<div id="prompt">X goes first
+</div>
+<div class="board">
+<div class="row">
+  <div id="p11" class="place">+
+  </div> <!-- end of place-->
+  <div id="p12" class="place">+
+  </div> <!-- end of place-->
+  <div id="p13" class="place">+
+  </div> <!-- end of place-->
+</div> <!-- end of row -->
+<div class="row">
+  <div id="p21" class="place">+
+  </div> <!-- end of place-->
+  <div id="p22" class="place">+
+  </div> <!-- end of place-->
+  <div id="p23" class="place">+
+  </div> <!-- end of place-->
+</div>
+<div class="row">
+  <div id="p31" class="place">+
+  </div> <!-- end of place-->
+  <div id="p32" class="place">+
+  </div> <!-- end of place-->
+  <div id="p33" class="place">+
+  </div> <!-- end of place-->	
+</div>
+</div>
+<div id="reset" class="btn">Reset</div>
+
+
+
+</body>
+
+</html>
