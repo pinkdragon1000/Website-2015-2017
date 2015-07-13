@@ -107,7 +107,7 @@ console.log("Play Tic Tac Toe!!");
 $(document).ready(
 
 	function() {
-		$("#reset").click(function(){reset();});
+		$("#reset").on("click touchstart",function(){reset();});
 		console.log("document ready");
 		
 		$(".place").click(
