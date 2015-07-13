@@ -107,10 +107,10 @@ console.log("Play Tic Tac Toe!!");
 $(document).ready(
 
 	function() {
-		$("#reset").on("click touchstart",function(){e.stopPropagation(); e.preventDefault();reset();});
+		$("#reset").bind("click touchstart",function(){e.stopPropagation(); e.preventDefault();reset();});
 		console.log("document ready");
 		
-		$(".place").on("click touchstart",
+		$(".place").bind("click touchstart",
 		function(){
 			e.stopPropagation(); e.preventDefault();
 			console.log("Clicked");
