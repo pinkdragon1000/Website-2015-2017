@@ -14,7 +14,7 @@ function reset()
 	$(".place").html("+")
 	count=0;
  $("#prompt").html("X goes first")
-
+gameOver=false;
 }
 var win = new Audio("win.mp3");
 win.load();
@@ -101,6 +101,8 @@ else
 }
 }
 
+var gameOver=false;
+
 
 
 console.log("Play Tic Tac Toe!!");
@@ -116,7 +118,7 @@ $(document).ready(
 			e.stopPropagation(); e.preventDefault();
 			console.log("Clicked");
 			var what = $(this).html();
-			if ($(this).html().startsWith("+"))
+			if ($(this).html().startsWith("+")&&!gameOver)
 			{
 
 			if(count%2==0)
@@ -133,15 +135,19 @@ $(document).ready(
     {
       $("#prompt").html("X Wins!!!")
       playwin();
+      gameOver=true;
     }
     else if(check()=="O")
     {
       $("#prompt").html("O Wins!!!")
       playwin();
+      gameOver=true;
     }
     else if (check()=="C")
+    {
       $("#prompt").html("Cats Game-No Winner")
-
+      gameOver=true;
+    }
 		});
 
 	});
