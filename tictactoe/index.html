@@ -108,10 +108,10 @@ $(document).ready(
 
 	function() {
 		$(document).on("touchmove",false);
-		$("#reset").on("click touchend",function(e){e.stopPropagation(); e.preventDefault();reset();});
+		$("#reset").on("click touchend touchcancel",function(e){e.stopPropagation(); e.preventDefault();reset();});
 		console.log("document ready");
 		
-		$(".place").on("click touchend",
+		$(".place").on("click touchend touchcancel",
 		function(e){
 			e.stopPropagation(); e.preventDefault();
 			console.log("Clicked");
