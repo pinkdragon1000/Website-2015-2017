@@ -1,0 +1,140 @@
+<html>
+
+<head>
+	
+<title> Memory Game </title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+
+var secrets=[0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7]
+console.log("secrets", secrets);
+for(x=0;x<secrets.length-1;x++)
+{
+var temp=secrets[x];
+secrets[x]=secrets[x+1];
+secrets[x+1]=temp;
+console.log("secrets", secrets);
+}
+console.log("secrets", secrets);
+
+$(".place").each(function(i){
+
+  $(this).attr("secret",i);
+}); 
+
+
+$(".place").click(function(){$(this).html($(this).attr("secret"));});
+
+
+});
+
+
+</script>
+<style>
+body {user-select:none;
+  -webkit-user-select:none;}
+
+.btn {
+  display: inline-block;
+ background: #8f3489;
+  background-image: -webkit-linear-gradient(top, #8f3489, #cabcd6);
+  background-image: -moz-linear-gradient(top, #8f3489, #cabcd6);
+  background-image: -ms-linear-gradient(top, #8f3489, #cabcd6);
+  background-image: -o-linear-gradient(top, #8f3489, #cabcd6);
+  background-image: linear-gradient(to bottom, #8f3489, #cabcd6);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  cursor:pointer;
+}
+
+.btn:hover {
+ background: #3cb0fd;
+  background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+  background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+  text-decoration: none;
+}
+.place {
+border: 1px solid black;
+width: 64px;
+height: 64px;
+text-align:center;
+font-size: 56px;
+display: inline-block;
+margin:5px;
+font-family: Courier;
+font-weight: bold;
+border-radius:5px;
+cursor:pointer;
+}
+.place:hover
+{
+background-color:purple;
+}
+</style>
+
+
+
+</head>
+<body>
+<h1>Memory Game</h1>
+<div id="prompt">Directions: Match the two matching cards together.  Reset to play again.    
+</div>
+<div class="board">
+<div class="row">
+  <div id="p11" class="place">
+  </div> <!-- end of place-->
+  <div id="p12" class="place">
+  </div> <!-- end of place-->
+  <div id="p13" class="place">
+  </div>
+  <div id="p14" class="place">
+  </div> <!-- end of place-->
+</div> <!-- end of row -->
+<div class="row">
+  <div id="p21" class="place">
+  </div> <!-- end of place-->
+  <div id="p22" class="place">
+  </div> <!-- end of place-->
+  <div id="p23" class="place">
+  </div> <!-- end of place-->
+  <div id="p24" class="place">
+  </div>
+</div>
+<div class="row">
+  <div id="p31" class="place">
+  </div> <!-- end of place-->
+  <div id="p32" class="place">
+  </div> <!-- end of place-->
+  <div id="p33" class="place">
+  </div> <!-- end of place-->	
+  <div id="p34" class="place">
+  </div>
+</div>
+<div class="row">
+  <div id="p41" class="place">
+  </div>
+  <div id="p42" class="place">
+  </div>
+  <div id="p43" class="place">
+  </div>
+  <div id="p44" class="place">
+  </div>
+</div>
+</div>
+<div id="reset" class="btn">Reset</div>
+
+
+
+</body>
+
+</html>
