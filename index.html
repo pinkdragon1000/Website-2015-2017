@@ -9,19 +9,24 @@
 <link href='http://fonts.googleapis.com/css?family=Monoton' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Josefin+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="css/bootstrap.css">
+
 <style>
- body {
+ html, body {
+  {height: 100%; margin: 0}
+   #content {width: 100%; height: 100%}
+   #left {width: 200px; height: 100%; float: left; background-color: black}
+   #right {margin-left: 100px; height: 100%; background-color: white}
+
   text-align: center;
   font-family: Arial;
   background: #f8f8f8 
-  background-image: url("images/wood.jpg");
 
   font-family: 'Josephin Sans';
   font-size:large;
 }
 
 .btn {
- margin-top: 160px;
+ margin-top: 15px;
  margin-right: 30px;
   width: 64px;
   height: 64px;
@@ -51,9 +56,9 @@ content: '';
   right: -8px;
   bottom: -8px;
   left: -8px;
-  -moz-border-radius: 140px;
-  -webkit-border-radius: 140px;
-  border-radius: 140px;
+  -moz-border-radius: 48px;
+  -webkit-border-radius: 48px;
+  border-radius: 48px;
   opacity: 0.5; 
 background-color: pink;
 }
@@ -68,9 +73,9 @@ top:-9px;
 
 content: '';
   /*background-color: #eaeaea;*/
-  -moz-border-radius: 140px;
-  -webkit-border-radius: 140px;
-  border-radius: 140px;
+  -moz-border-radius: 32px;
+  -webkit-border-radius: 32px;
+  border-radius: 32px;
   opacity: 0.5;
 }
 
@@ -130,27 +135,17 @@ $("#animals").hide().slideDown(300);
 </font>
 </div>
 </div>
-<div class="row">
-<div class="col-md-12">
-</div>
-</div>
-
-<center>
-<div class="row">
-  
-<div class="col-md-2 btn"><img src="images/about.png"><a href="#about"></a></div>
-<div class="col-md-2 btn"><img src="images/activitiesclubs.png"><a href="#activities/clubs"></a></div>
-<div class="col-md-2 btn"><img src="images/education.png"><a href="#education"></a></div>
-<div class="col-md-3 btn"><img src="images/awards.png"><a href="#accolades/achievements"></a></div>
-<div class="col-md-2 btn"><img src="images/games.png"><a href="#games"></a></div>
-<div class="col-md-2 btn"><img src="images/video.png"><a href="#videos"></a></div>
-</center>
-</div>
 
 <div class="row">
-<div class="col-md-12 vertical-align">
-</div> 
+<a href="#about"><div class="col-md-2 btn"><img src="images/about.png"></div></a>
+<a href="#activities/clubs"><div class="col-md-2 btn"><img src="images/activitiesclubs.png"></div></a>
+<a href="#education"><div class="col-md-2 btn"><img src="images/education.png"></div></a>
+<a href="#accolades/achievements"><div class="col-md-3 btn"><img src="images/awards.png"></div></a>
+<a href="#games"><div class="col-md-2 btn"><img src="images/games.png"></div></a>
+<a href="#videos"><div class="col-md-2 btn"><img src="images/video.png"></div></a>
 </div>
+
+
   </div>
   <font color="black">
 
@@ -215,19 +210,21 @@ $("#animals").hide().slideDown(300);
 
 <a id="games"><h2>Games</h2></a>
 
-<a href="tictactoe/index.html">Tic Tac Toe</a>
-
+<li><a href="tictactoe/index.html">Tic Tac Toe</a></li>
+<li><a href="Matching/index.html">Matching(Concentration)-IN PROGRESS</a></li>
 <a id="videos"><h2>Videos</h2></a>
-<ul>
-<li>Spirit of Freedom 2012 Show Pursuit of Joy</li>
+<ul> 
+ <h3>Marching Band</h3> 
+<li>Spirit of Freedom 2012 Show: Pursuit of Joy</li>
 <iframe width="854" height="510" src="https://www.youtube.com/embed/4v4x-geK7ak?list=LLzVZ1F_xoLdTChgmke1yOYQ" frameborder="0" allowfullscreen></iframe>
-<li>Spirit of Freedom 2013 Show On Fire</li>
+<li>Spirit of Freedom 2013 Show: On Fire</li>
 <iframe width="854" height="510" src="https://www.youtube.com/embed/mIWF8709wic?list=LLzVZ1F_xoLdTChgmke1yOYQ" frameborder="0" allowfullscreen></iframe>
-<li>Spirit of Freedom 2014 Show Strength and Honor</li>
+<li>Spirit of Freedom 2014 Show: Strength and Honor</li>
 <iframe width="854" height="510" src="https://www.youtube.com/embed/MyZcYLJ8j6s?list=LLzVZ1F_xoLdTChgmke1yOYQ" frameborder="0" allowfullscreen></iframe>
-<li>Spirit of Freedom 2015 Show Speed of Sound</li>
+<li>Spirit of Freedom 2015 Show: Speed of Sound</li>
 <div> IN PROGRESS</div>
 <img src="images/sound waves1.jpg" alt="soundwaves1">
+</ul>
 </font>
 </body>
 </html>
