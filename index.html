@@ -11,13 +11,9 @@
 <link rel="stylesheet" href="css/bootstrap.css">
 
 <style>
- html, body {
-  {height: 100%; margin: 0}
-   #content {width: 100%; height: 100%}
-   #left {width: 200px; height: 100%; float: left; background-color: black}
-   #right {margin-left: 100px; height: 100%; background-color: white}
-
-  text-align: center;
+ body {
+  
+  text-align: left;
   font-family: Arial;
   background: #f8f8f8 
 
@@ -25,7 +21,7 @@
   font-size:large;
 }
 
-.btn {
+.mybtn {
  margin-top: 15px;
  margin-right: 30px;
   width: 64px;
@@ -47,8 +43,7 @@
   -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
   box-shadow: 0 1px 1px rgba(0, 0, 0, .25), 0 2px 3px rgba(0, 0, 0, .1);
 }
-.btn::before
-{
+.mybtn::before{
 content: '';
   position: absolute;
   z-index: -1;
@@ -62,14 +57,14 @@ content: '';
   opacity: 0.5; 
 background-color: pink;
 }
-.btn:hover::before
+.mybtn:hover::before
 {
 
 opacity:1;
 top:-9px;
 
 }
-.btn:hover {
+.mybtn:hover {
 
 content: '';
   /*background-color: #eaeaea;*/
@@ -77,10 +72,10 @@ content: '';
   -webkit-border-radius: 32px;
   border-radius: 32px;
   opacity: 0.5;
+
 }
 
-
-.btn:active{
+.mybtn:active{
 top: 1px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#f6f6f6));
   background-image: -webkit-linear-gradient(top, #eaeaea, #f6f6f6);
@@ -90,7 +85,13 @@ top: 1px;
   background-image: linear-gradient(top, #eaeaea, #f6f6f6);
 }
 
+.mybtnlink
+{
+display:inline-block;
 
+
+
+}
 .place {
 border: 1px solid black;
 width: 64px;
@@ -111,11 +112,13 @@ background-color:pink;
 
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script>
 $(document).ready(function(){
 $('h1').hide().slideDown(500);
 $("#animals").hide().slideDown(300);
 //$("#animals").show("slide", { direction: "left" }, 1000);
+  $('[data-toggle="tooltip"]').tooltip();  
 });
 </script>
 </head>
@@ -137,29 +140,24 @@ $("#animals").hide().slideDown(300);
 </div>
 
 <div class="row">
-<a href="#about"><div class="col-md-2 btn"><img src="images/about.png"></div></a>
-<a href="#activities/clubs"><div class="col-md-2 btn"><img src="images/activitiesclubs.png"></div></a>
-<a href="#education"><div class="col-md-2 btn"><img src="images/education.png"></div></a>
-<a href="#accolades/achievements"><div class="col-md-3 btn"><img src="images/awards.png"></div></a>
-<a href="#games"><div class="col-md-2 btn"><img src="images/games.png"></div></a>
-<a href="#videos"><div class="col-md-2 btn"><img src="images/video.png"></div></a>
+
+<a href="#about" class="mybtnlink"> <div class="col-md-2 mybtn" data-placement="bottom" data-toggle="tooltip"  title="About Me"><img src="images/about.png"></div></a>
+<a href="#activities/clubs" class="mybtnlink" ><div class="col-md-2 mybtn"data-placement="bottom" data-toggle="tooltip"  title="Activities/Clubs"><img src="images/activitiesclubs.png"></div></a>
+<a href="#education"class="mybtnlink" ><div class="col-md-2 mybtn" data-placement="bottom" data-toggle="tooltip" title="Education"><img src="images/education.png"></div></a>
+<a href="#accolades/achievements" class="mybtnlink"><div class="col-md-3 mybtn"data-toggle="tooltip" data-placement="bottom" title="Achievements"><img src="images/awards.png"></div></a>
+<a href="#games" class="mybtnlink" ><div class="col-md-2 mybtn"data-toggle="tooltip" data-placement="bottom" title="Games"><img src="images/games.png"></div></a>
+<a href="#videos" class="mybtnlink" ><div class="col-md-2 mybtn"data-toggle="tooltip" data-placement="bottom" title="Videos"><img src="images/video.png"></div></a>
 </div>
-
-
   </div>
   <font color="black">
 
-<a id="about"><h2>About</h2></a>
+<a id="about"><h2>About Me</h2></a>
 <!--<div class="row">-->
 	<!--<div class="col-md-2">-->
 	<!--<img src="images/me.png" alt="me"-->
 	<div class="description col-md-12 vertical-align">
 		Hello, I am Sita Robinson.  I am attending Freedom High School until 2016, when I graduate.  I'm involved in a lot of activities where I serve the community such as in different honor societies that I am involved in and working at the Smithsonian National Air and Space Museum.  However, I don't just do it to stay in the honor societies, I love helping others!  I also love to program,take pictures,play my clarinet/piano, play scrabble, and travel around the world.</div>
-		
-	
 
-<br><br>
-<br><br>
 <a id="activities/clubs"><h2 stlye="font-family:Josephin Sans;">Activities/Clubs</h2></a>
 <ul>
 <li>Spirit of Freedom Marching Band-Leader 2014 to present, Member-2012 to present</li>
@@ -171,6 +169,8 @@ $("#animals").hide().slideDown(300);
 <li>Programming Club-Member 2015 to present</li>
 <li>Future Educators Association(FEA)-2015 to present</li>
 </ul>
+<br></br>
+<br></br>
 <a id="accolades/achievements"><h2>Accolades/Achievements</h2></a>
 <ul>
 <li>Student of the Month-2014</li>
