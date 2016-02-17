@@ -27,7 +27,7 @@
   width: 64px;
   height: 64px;
   display: inline-block;
-  position: relative;
+  position: absolute;
   line-height: 64px;
   background-color: #eaeaea;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f6f6f6), to(#eaeaea));
@@ -74,6 +74,9 @@ content: '';
   opacity: 0.5;
 
 }
+.wrapper {
+    text-align: center;
+}
 
 .mybtn:active{
 top: 1px;
@@ -89,9 +92,8 @@ top: 1px;
 {
 display:inline-block;
 
-
-
 }
+
 .place {
 border: 1px solid black;
 width: 64px;
@@ -140,13 +142,14 @@ $("#animals").hide().slideDown(300);
 </div>
 
 <div class="row">
-
+<div class="wrapper">
 <a href="#about" class="mybtnlink"> <div class="col-md-2 mybtn" data-placement="bottom" data-toggle="tooltip"  title="About Me"><img src="images/about.png"></div></a>
 <a href="#activities/clubs" class="mybtnlink" ><div class="col-md-2 mybtn"data-placement="bottom" data-toggle="tooltip"  title="Activities/Clubs"><img src="images/activitiesclubs.png"></div></a>
 <a href="#education"class="mybtnlink" ><div class="col-md-2 mybtn" data-placement="bottom" data-toggle="tooltip" title="Education"><img src="images/education.png"></div></a>
 <a href="#accolades/achievements" class="mybtnlink"><div class="col-md-3 mybtn"data-toggle="tooltip" data-placement="bottom" title="Achievements"><img src="images/awards.png"></div></a>
 <a href="#games" class="mybtnlink" ><div class="col-md-2 mybtn"data-toggle="tooltip" data-placement="bottom" title="Games"><img src="images/games.png"></div></a>
 <a href="#videos" class="mybtnlink" ><div class="col-md-2 mybtn"data-toggle="tooltip" data-placement="bottom" title="Videos"><img src="images/video.png"></div></a>
+</div>
 </div>
   </div>
   <font color="black">
